@@ -23,7 +23,8 @@ class Tab1 extends Component {
 	}
 
 	render() {
-		return <View style={{backgroundColor:"gray",flex:1}}><Text>1</Text></View>;
+		return <View
+			style={{backgroundColor:"lightgray",flex:1,justifyContent:"center",alignItems:"center"}}><Text>Tab1</Text></View>;
 	}
 }
 
@@ -37,17 +38,17 @@ class Tab2 extends Component {
 	}
 
 	render() {
-		return <View style={{backgroundColor:"lightgray",flex:1}}><Text>2</Text></View>;
+		return <View
+			style={{backgroundColor:"lightgray",flex:1,justifyContent:"center",alignItems:"center"}}><Text>Tab2</Text></View>;
 	}
 }
 
 export default class test extends Component {
 	render() {
 		return (
-			<View>
-				<View style={{height:60,backgroundColor:"green"}}></View>
+			<View style={{flex:1}}>
 				<TabView
-					style={{height:300}}
+					style={{flex:1}}
 					tabs={[{
 						text:"tab1",
 						onTabBarPress:()=>{},
@@ -55,13 +56,18 @@ export default class test extends Component {
 					  },{
 						text:"tab2",
 						component:<Tab2/>
+					  },{
+						text:"tab3",
+						component:<View style={{backgroundColor:"lightgray",flex:1,justifyContent:"center",alignItems:"center"}}>
+									<Text>Tab3</Text>
+								</View>
 					  }]}
-								renderTabBar={(isActive,tab)=>{
+					renderTabBar={(isActive,tab)=>{
 						console.log("render tab bar")
 						if(isActive){
-						  return <Text style={{textAlign:"center"}}>{tab.text}</Text>
+						  return <Text style={{backgroundColor:"yellow",textAlign:"center",height:60,lineHeight:60}}>{tab.text}</Text>
 						}
-						return <Text style={{backgroundColor:"yellow",textAlign:"center"}}>{tab.text}</Text>
+						return <Text style={{textAlign:"center",height:60,lineHeight:60}}>{tab.text}</Text>
 					  }}>
 				</TabView>
 			</View>
