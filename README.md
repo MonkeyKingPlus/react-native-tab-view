@@ -33,3 +33,12 @@ $ npm install mkp-react-native-tab-view --save
       }}>
 </TabView>
 ```
+# TabView Props
+## tabs:object[]
+This property is used to configure tab bar . you must provide a array , children can be any object.
+## renderTabBar(isActive:bool,tab:object)
+This property specify how to render tab bar, the first parameter mark the bar whether is active, the second parameter refer to tabs's item.
+you must implement this method.
+## style:object|number
+## tabBarPosition:"top"|"bottom"
+Marking the tab bar position when is top or bottom, the default value is "bottom".
