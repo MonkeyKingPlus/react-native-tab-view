@@ -13,11 +13,14 @@ $ npm install mkp-react-native-tab-view --save
     style={{flex:1}}
     tabs={[{
         text:"tab1",
-        onTabBarPress:()=>{},
+        onPress:()=>{},
         component:<Tab1/>
       },{
         text:"tab2",
-        component:<Tab2/>
+        component:<Tab2/>,
+        onHide:(tab,index)=>{
+        	console.log(`tab${index} will be hidden`);
+        }
       },{
         text:"tab3",
         component:<View style={{backgroundColor:"lightgray",flex:1,justifyContent:"center",alignItems:"center"}}>
