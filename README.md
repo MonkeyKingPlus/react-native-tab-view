@@ -7,6 +7,9 @@ React Native TabView<br/>
 $ npm install mkp-react-native-tab-view --save
 ```
 
+# Support
+IOS/Android
+
 # Quick Start
 ```javascript
 <TabView
