@@ -55,7 +55,10 @@ export default class test extends Component {
 						component:<Tab1/>
 					  },{
 						text:"tab2",
-						component:<Tab2/>
+						component:<Tab2/>,
+						onHide:(tab,index)=>{
+							console.log(`tab${index} hidden`);
+						}
 					  },{
 						text:"tab3",
 						component:<View style={{backgroundColor:"lightgray",flex:1,justifyContent:"center",alignItems:"center"}}>

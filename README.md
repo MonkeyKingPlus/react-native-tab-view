@@ -35,7 +35,20 @@ $ npm install mkp-react-native-tab-view --save
 ```
 # TabView Props
 ## tabs:object[]
-This property is used to configure tab bar . you must provide a array , children can be any object.
+This property is used to configure tab bar . you must provide a array , children can be any object. but some one is defined ,please see it following,
+```javascript
+// type tab
+type tab={
+	//tab content
+	component:Element,
+	//invoke when tab bar click
+	onPress:Function,
+	//invoke when tab content will be hidden
+	onHide:Function,
+	//any custom parameter
+	...otherParameter
+};
+```
 ## renderTabBar(isActive:bool,tab:object)
 This property specify how to render tab bar, the first parameter mark the bar whether is active, the second parameter refer to tabs's item.
 you must implement this method.
