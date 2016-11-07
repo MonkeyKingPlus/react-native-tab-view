@@ -1,4 +1,12 @@
 # react-native-tab-view
+
+<!-- badge -->
+[![npm version](https://img.shields.io/npm/v/mkp-react-native-tab-view.svg)](https://www.npmjs.com/package/mkp-react-native-tab-view)
+[![npm license](https://img.shields.io/npm/l/mkp-react-native-tab-view.svg)](https://www.npmjs.com/package/mkp-react-native-tab-view)
+[![npm download](https://img.shields.io/npm/dm/mkp-react-native-tab-view.svg)](https://www.npmjs.com/package/mkp-react-native-tab-view)
+[![npm download](https://img.shields.io/npm/dt/mkp-react-native-tab-view.svg)](https://www.npmjs.com/package/mkp-react-native-tab-view)
+<!-- endbadge -->
+
 React Native TabView<br/>
 <img src="https://raw.githubusercontent.com/MonkeyKingPlus/react-native-tab-view/master/test/screenshot/react-native-tab-view-demo.gif"/>
 
