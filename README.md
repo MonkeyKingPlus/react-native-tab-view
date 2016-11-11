@@ -69,3 +69,5 @@ you must implement this method.
 ## style:object|number
 ## tabBarPosition:"top"|"bottom"
 Marking the tab bar position when is top or bottom, the default value is "bottom".
+## index:Number
+the default value is 0.

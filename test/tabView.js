@@ -26,7 +26,7 @@ export default class TabView extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			index: 0,
+			index: props.index,
 			previousIndex:-1
 		};
 	}
@@ -40,12 +40,14 @@ export default class TabView extends Component {
 			onHide:PropTypes.func
 		})).isRequired,
 		renderTabBar: PropTypes.func.isRequired,
-		tabBarPosition: PropTypes.oneOf(["top", "bottom"])
+		tabBarPosition: PropTypes.oneOf(["top", "bottom"]),
+		index:PropTypes.number
 	}
 
 	static defaultProps = {
 		tabBarPosition: "bottom",
-		style: {}
+		style: {},
+		index:0
 	}
 
 	render() {
