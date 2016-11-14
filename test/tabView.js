@@ -33,6 +33,7 @@ export default class TabView extends Component {
 
 	static propTypes = {
 		style: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
+		styles:PropTypes.object,
 		tabs: PropTypes.arrayOf(PropTypes.shape({
 			text: PropTypes.string.isRequired,
 			component: PropTypes.element,
@@ -47,12 +48,16 @@ export default class TabView extends Component {
 	static defaultProps = {
 		tabBarPosition: "bottom",
 		style: {},
+		styles:{
+			tabBar:{},
+			content:{}
+		},
 		index:0
 	}
 
 	render() {
 		let content = (
-			<View style={[styles.contents]}>
+			<View style={[styles.contents,this.props.styles.content]}>
 				{this.props.tabs.map((item, index)=> {
 					if(index===this.state.previousIndex
 						&& item.onHide){
@@ -73,7 +78,7 @@ export default class TabView extends Component {
 			</View>
 		);
 		let tabBar = (
-			<View style={[styles.tabBars]}>
+			<View style={[styles.tabBars,this.props.styles.tabBar]}>
 				{this.props.tabs.map((item, index)=> {
 					return (
 						<TouchableWithoutFeedback

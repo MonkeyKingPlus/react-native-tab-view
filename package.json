@@ -1,6 +1,6 @@
 {
   "name": "mkp-react-native-tab-view",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "TabView with React Native",
   "main": "index.js",
   "directories": {
